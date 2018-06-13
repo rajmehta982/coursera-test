@@ -14,9 +14,27 @@
     {
 
 
+       if(typeof $scope.food === 'undefined')
+      {
+          $scope.message = "Enter the items";
+          return;
+        }
+
+      if($scope.food.length==0)
+
+        {
+            $scope.message = "Enter the items";
+            return;
+          }
+
       var FoodArray = $scope.food.split(',');
       var items = FoodArray.length;
-        if(items<=3)
+
+
+
+
+
+         if(items<=3)
         $scope.message="Enjoy";
 
         else
