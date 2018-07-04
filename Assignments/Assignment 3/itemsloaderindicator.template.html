@@ -1,0 +1,11 @@
+<ul>
+  <li ng-repeat="item in list.items">
+    {{ item.name}} ({{ item.short_name }})
+    <button ng-click="list.onRemove({index: $index});">Dont want this one</button>
+    <br></br>
+    {{item.description}}
+  </li>
+
+</ul>
+
+<div ng-if = "list.abcerror()">{{list.error}}</div>
