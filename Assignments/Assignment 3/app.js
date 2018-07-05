@@ -41,9 +41,10 @@ function NarrowItDownController(MenuSearchService) {
 
  if(menu.items.length==0)
  menu.errorMessage = "Nothing Found";
- if(!searchTerm)
+ if(!searchTerm){
  menu.errorMessage = "Nothing Found";
-
+ menu.items = [];
+ }
 
 };
 
